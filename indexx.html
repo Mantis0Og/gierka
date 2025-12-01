@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Empire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icon-192.png">
+</head>
+<body>
+    <audio src="./music/main-music.mp3" autoplay loop id="lobby-music"></audio>
+        <audio src="./music/start-sound.wav" id="start-sound"></audio>
+
+    <div class="app" id="app">
+        
+
+        <div class="lobby" id="lobby">
+
+            <img src="./img/banner.png" alt="Game Banner" id="banner-game">
+            <img src="./icon-512.png" alt="Logo" id="logo-game">
+            <img src="./img/lobby-play-btn.png" alt="Play Button" id="play-btn" onclick="Start()"> 
+
+        </div>
+
+    
+
+
+
+    </div>
+
+
+    <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js')
+    .then(() => console.log('Service Worker zarejestrowany!'))
+    .catch((err) => console.log('Błąd rejestracji SW:', err));
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>
